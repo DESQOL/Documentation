@@ -1,0 +1,9 @@
+language: minimal
+jobs:
+  include:
+    - stage: "Sync"
+      if: branch = master
+      script:
+        - git remote add gitlab https://oauth2:$GITLAB_TOKEN@gitlab.fdmci.hva.nl/desqol/documentation.git
+        - git push --force gitlab --all
+        - git push --force gitlab --tags
