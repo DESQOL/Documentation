@@ -4,6 +4,6 @@ jobs:
     - stage: "Sync"
       if: branch = master
       script:
-        - git remote add gitlab https://oauth2:$GITLAB_TOKEN@gitlab.fdmci.hva.nl/desqol/documentation.git
+        - git remote add gitlab https://oauth2:$GITLAB_TOKEN@gitlab.fdmci.hva.nl/IoT/sept-jan-20192020/gluten/documentation.git
         - git push --force gitlab --all
         - git push --force gitlab --tags
